@@ -1,0 +1,7 @@
+name = "inventory"
+main = "src/index.ts"
+compatibility_date = "2024-11-12"
+
+# Workers Logs
+# [observability]
+# enabled = true
