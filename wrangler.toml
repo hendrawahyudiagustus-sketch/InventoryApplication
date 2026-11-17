@@ -2,6 +2,18 @@ name = "inventory"
 main = "src/index.ts"
 compatibility_date = "2024-11-12"
 
-# Workers Logs
-# [observability]
-# enabled = true
+# Static assets built by Vite (React UI)
+[assets]
+directory = "./dist/client"
+binding = "ASSETS"
+
+# D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "inventory-db"
+database_id = "0103beb5-8118-4b53-9aed-657a62807d08"
+
+# R2 Bucket (opsional / fallback in memory jika bucket belum diaktifkan di dashboard)
+# [[r2_buckets]]
+# binding = "BUCKET"
+# bucket_name = "inventory-bucket"

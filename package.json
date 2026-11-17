@@ -1,15 +1,28 @@
 {
   "name": "inventory",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev"
+    "build:client": "vite build",
+    "build": "vite build",
+    "dev:client": "vite",
+    "dev:server": "wrangler dev",
+    "dev": "vite",
+    "deploy": "vite build && wrangler deploy"
+  },
+  "dependencies": {
+    "hono": "^4.13.19",
+    "lucide-react": "^1.74.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241112.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
     "typescript": "^5.5.2",
-    "wrangler": "^3.90.0"
+    "vite": "^8.3.8",
+    "wrangler": "^3.114.17"
   }
 }
